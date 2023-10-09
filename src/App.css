@@ -1,0 +1,87 @@
+body {
+  font-family: "chivo";
+  font-size: 1.2rem;
+}
+
+html {
+  height: 100vh;
+  margin: 0; 
+}
+
+.nav {
+  background: linear-gradient(270deg, #615F65 0%, #343041 100%);
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.title {
+  margin-left: 1.5vw;
+}
+
+.all-ranges{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.range {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-range {
+  display: flex; 
+  width: 30vw;
+  justify-content: space-between;
+}
+
+@font-face {
+  font-family: "chivo";
+  src: url('assets/Chivo/Chivo-VariableFont_wght.ttf');
+}
+
+
+.range-number {
+  color:#EB6424;
+}
+
+.custom-range {
+  margin-top: 1vh;
+  height: 0.2vh;
+  accent-color: #EB6424;
+  cursor: pointer;
+  border-collapse:collapse;
+}
+
+.box {
+  width: 30vw;
+  height: 30vh;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-text {
+  padding: 0.5vh 1vw;
+}
+
+.actual-body {
+  display: flex;
+  width: 100vw;
+  height: 91vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.color-box {
+  width: 2.5vw;
+  height: 2.5vw;
+}
