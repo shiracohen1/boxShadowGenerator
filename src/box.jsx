@@ -9,9 +9,7 @@ const Box = (props) => {
         
         props.offsetTypes.map((range) => {
             changeBoxShadow(boxShadow => boxShadow + ` ${range["val"]}px` )
-            // boxShadow = boxShadow + ` ${range["val"]}px`;
         });
-        console.log(boxShadow)
     }, [props]);
 
     return (
