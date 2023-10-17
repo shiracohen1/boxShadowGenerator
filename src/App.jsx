@@ -15,7 +15,7 @@ function App() {
     "val": 0
   }, {
     "type": "blur",
-    "val": 0
+    "val": 100
   }, {
     "type": "range",
     "val": 0

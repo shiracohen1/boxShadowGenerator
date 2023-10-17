@@ -5,11 +5,6 @@ const RangeSlider = (props) => {
 
     const inputRef = useRef(null)
 
-    const [vals, setVals] = useState({
-        "max": 200,
-        "min": -200,
-    }) 
-
     const [rangeval, setRangeval] = useState({
         "horizontal": 0,
         "vertical": 0,
