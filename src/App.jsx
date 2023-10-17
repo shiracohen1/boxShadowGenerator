@@ -23,12 +23,19 @@ function App() {
 
   
   let ranges = [];
-  const [vals, setVals] = useState([]);
-  const [rangeTypes, setRangeTypes] = useState([]);
+  let [boxColor, setColor] = useState(`#000000`);
+  // const [vals, setVals] = useState([]);
+  // const [rangeTypes, setRangeTypes] = useState([]);
   const [_, forceUpdate] = useReducer(x => x + 1, 0);
+  
 
   for (let i = 0; i < offsetTypes.current.length; i++) {
     ranges.push(<Slider key={offsetTypes.current[i]["type"]} offType={offsetTypes.current[i]["type"]} storeValue={storeValue} />);
+  }
+
+  function updateColor(newColor) {
+    setColor(newColor);
+    forceUpdate();
   }
   
   function storeValue(name, value) {   
@@ -51,9 +58,9 @@ function App() {
       <div className='actual-body'>
         <div className='all-ranges'>
           {ranges} 
-          <ColorPicker />
+          <ColorPicker handleChange={updateColor}/>
         </div>
-        <Box vals={vals} offsetTypes={offsetTypes.current} rangeTypes={rangeTypes} />
+        <Box color={boxColor} offsetTypes={offsetTypes.current} />
       </div>
     </div>
   )

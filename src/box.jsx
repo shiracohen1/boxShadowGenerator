@@ -1,14 +1,24 @@
 import './App.css'
+import { useEffect, useState } from 'react';
 
 const Box = (props) => {
-    console.log(props.offsetTypes);
-    const values = []
-    const pushingToArray = props.offsetTypes.map((range) => values.push(` ${range["val"]}px`))
+    const [boxShadow, changeBoxShadow] = useState();
+
+    useEffect(() => {
+        changeBoxShadow(``)
+        
+        props.offsetTypes.map((range) => {
+            changeBoxShadow(boxShadow => boxShadow + ` ${range["val"]}px` )
+            // boxShadow = boxShadow + ` ${range["val"]}px`;
+        });
+        console.log(boxShadow)
+    }, [props]);
+
     return (
-        <div className="box">
-            <div className='box-text'>box-shadow: {values};</div>
-            <div className='box-text'>-webkit-box-shadow: {values};</div>
-            <div className='box-text'>-moz-box-shadow: {values};</div>
+        <div className="box" style={{ boxShadow: `${boxShadow} ${props.color}` }}>
+            <div className='box-text'>box-shadow: {boxShadow} {props.color};</div>
+            <div className='box-text'>-webkit-box-shadow: {boxShadow} {props.color};</div>
+            <div className='box-text'>-moz-box-shadow: {boxShadow} {props.color};</div>
         </div>
     )
 }
