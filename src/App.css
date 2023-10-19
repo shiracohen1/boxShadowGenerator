@@ -86,3 +86,16 @@ html {
   width: 2.5vw;
   height: 2.5vw;
 }
+
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 40vh;
+}
+.copy-code {
+  background-image: linear-gradient(90deg, #EB6424, #FFAE63C9);
+  border-style: none;
+}

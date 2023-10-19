@@ -6,10 +6,10 @@ const RangeSlider = (props) => {
     const inputRef = useRef(null)
 
     const [rangeval, setRangeval] = useState({
-        "horizontal": 0,
-        "vertical": 0,
-        "blur": 100,
-        "range": 0
+        "Horizontal Offset": 0,
+        "Vertical Offset": 0,
+        "Blur": 100,
+        "Range": 0
       });
 
     function handleChange(event) {
@@ -27,7 +27,7 @@ const RangeSlider = (props) => {
     return (
     <div className='range'>
         <div className='text-range'>
-            <span>{props.offType} offset</span>
+            <span>{props.offType}</span>
             <span className='range-number'>{rangeval[props.offType]}px</span>
         </div>
         <input type="range" className="custom-range" min={props.offType === "blur" ? "0" : "-200"} max="200" ref={inputRef} defaultValue={props.offType === "blur" ? 100 : 0} onChange={handleChange} />

@@ -8,16 +8,16 @@ import Box from './box'
 function App() {
 
   const offsetTypes = useRef([{
-    "type": 'horizontal',
+    "type": 'Horizontal Offset',
     "val": 0
   }, {
-    "type": "vertical",
+    "type": "Vertical Offset",
     "val": 0
   }, {
-    "type": "blur",
+    "type": "Blur",
     "val": 100
   }, {
-    "type": "range",
+    "type": "Range",
     "val": 0
   }]);
 
