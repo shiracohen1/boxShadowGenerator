@@ -18,14 +18,12 @@ function App() {
     "val": 100
   }, {
     "type": "Range",
-    "val": 0
-  }]);
+    "val": 100
+  }
+]);
 
-  
   let ranges = [];
-  let [boxColor, setColor] = useState(`#000000`);
-  // const [vals, setVals] = useState([]);
-  // const [rangeTypes, setRangeTypes] = useState([]);
+  let [boxColor, setBoxColor] = useState();
   const [_, forceUpdate] = useReducer(x => x + 1, 0);
   
 
@@ -34,7 +32,7 @@ function App() {
   }
 
   function updateColor(newColor) {
-    setColor(newColor);
+    setBoxColor(newColor);
     forceUpdate();
   }
   
@@ -47,7 +45,6 @@ function App() {
         forceUpdate();
       }
     }
-
   }
 
   return (
@@ -58,9 +55,9 @@ function App() {
       <div className='actual-body'>
         <div className='all-ranges'>
           {ranges} 
-          <ColorPicker handleChange={updateColor}/>
+          <ColorPicker updateColor={updateColor}/>
         </div>
-        <Box color={boxColor} offsetTypes={offsetTypes.current} />
+        <Box boxColor={boxColor} offsetTypes={offsetTypes.current} />
       </div>
     </div>
   )
