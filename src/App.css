@@ -47,6 +47,9 @@ html {
   src: url('assets/Chivo/Chivo-VariableFont_wght.ttf');
 }
 
+.actual-body {
+  background-color: #FDF6F3;
+}
 
 .range-number {
   color:#EB6424;
