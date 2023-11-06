@@ -4,6 +4,7 @@ import Nav from './nav'
 import Slider from './slider'
 import ColorPicker from './colorPicker'
 import Box from './box'
+import Footer from './footer'
 
 function App() {
 
@@ -53,12 +54,15 @@ function App() {
         <Nav />
       </div>
       <div className='actual-body'>
-        <div className='all-ranges'>
-          {ranges} 
-          <ColorPicker updateColor={updateColor}/>
-        </div>
-        <Box boxColor={boxColor} offsetTypes={offsetTypes.current} />
-      </div>
+        {/* <div> */}
+            <div className='all-ranges'>
+              {ranges} 
+              <ColorPicker updateColor={updateColor}/>
+            </div>
+            <Box boxColor={boxColor} offsetTypes={offsetTypes.current} />
+          </div>
+          <Footer />
+        {/* </div> */}
     </div>
   )
 }
